@@ -1,4 +1,4 @@
-var d, h, m, s, clock;
+var d, h, m, s, clock, color;
 
 function clocky(){
     d = new Date();
@@ -18,7 +18,12 @@ if (s <= 9){
 
 clock = h + ":" + m + ":" + s;
 
+color = "#" + h + m + s;
+
 document.getElementById("clock").innerHTML = clock;
+
+document.body.style.background = color;
+
 setTimeout(clocky, 1000);
 }
 
